@@ -1,0 +1,8 @@
+pip install virtualenv
+conda install -c anaconda psutil
+conda install -c conda-forge pyspark
+
+https://docs.microsoft.com/en-us/azure/synapse-analytics/spark/vscode-tool-synapse
+https://docs.microsoft.com/en-us/sql/big-data-cluster/spark-hive-tools-vscode?view=sql-server-ver15
+
+Spark and Hive Tools in vscode
