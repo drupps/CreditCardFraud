@@ -61,9 +61,7 @@ def pov(x):
 
     session.close()
 
-
-
-
+# Create a dictionary from the row data and append to a list of all transactions
 
 
 
