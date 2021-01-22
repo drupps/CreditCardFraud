@@ -3,3 +3,4 @@ creditcard.csv
 credit_card_synthetic_data.csv
 credit_card_real_data.csv
 .DS_Store
+*.ipynb_checkpoints
