@@ -51,18 +51,49 @@
           <div class="col-md-8">
             <table style="width:100%">
             <article class="description-content">
-                <h1 class="description-header">Graphs</h1>
+                <h1 class="description-header">Results</h1><br>
                 <hr class="description-hr"/>
-                <p>These graphs were utilized in determining if our machine learning models were running correctly. </p>
+                <p>These graphs were utilized in determining if our machine learning models were running correctly.
+                  Before analysis each dataset was split into a test and train set, with the training set oversampled to properly represent the positive case. This gave us approximately
+                  400,000 points of real data (after oversampling) and approximately 8,000,000 points of sythetic data (after oversampling) in our training sets. 
+                  In addition to the confusion matricies we ran several scoring parameters used to grade the model's accuracy. These are listed below.
+                  It is important to remember that the 'real' and 'synthetic' datasets represent different data and are not connected, but are used here to illustrate
+                  the overarching use of these models. </p><br>
+                <h2>Real Data</h2><br>
                 <img src="assets/images/confusion_matrix_knn_GOOD_real.png" alt="Real KNN Confusion Matrix" class="img-responsive"/>
-                    <h3>KNN Confusion Matrix for Real Data</h3>
-                    <p>[Brief Description Here]</p>
-                    <img src="assets/images/confusion_matrix_log_GOOD_real.png" alt="Real KNN Confusion Matrix" class="img-responsive"/>
-                    <p>[Brief Description Here]</p>
-                    <h3>Log Confusion Matrix for Real Data</h3>
-                    <img src="assets/images/confusion_matrix_log_GOOD_synthetic.png" alt="Real KNN Confusion Matrix" class="img-responsive"/>
-                    <h3>Log Confusion Matrix for Synthetic Data</h3>
-                    <p>[Brief Description Here]</p>
+                    <h3>KNN Confusion Matrix for Real Data</h3><br>
+                    <h3><strong>Model Score</strong> = 0.9984</h3>
+                    <h3><strong>AUC Score</strong> = 0.7423</h3>
+                    <p>A K-nearest-neighbor model was run with the real data. As expected with imbalanced data the model's score was good as it could assume most cases
+                      were negative (0, no credit card fraud). The model caught around 80% of all fraud cases, and flagged 82 non-fraud cases as fraud, more than three
+                      times the actual fraud. However this number is insignificant compared to the number of cases properly designated as not fraud, and would be a worthwile
+                      tradeoff. 
+
+                      While this model performed well it is important to note that large-dimension imbalanced datasets do not work well with the KNN approach. 
+                      The data may be so overlapped that various values of k do not change the outcome much. For this analysis we chose k=11 based on a multi-k
+                      analysis of the data. However we did not run extremely large values of k (greater than 50), thus there may be larger values that perform better.
+                    </p><br>
+                    <img src="assets/images/confusion_matrix_log_GOOD_real.png" alt="Real LOG Confusion Matrix" class="img-responsive"/>
+                    <h3>Log Confusion Matrix for Real Data</h3><br>
+                    <h3><strong>Model Score</strong> = 0.9726</h3>
+                    <h3><strong>AUC Score</strong> = 0.6663</h3>
+                    <p>Additionally a logarythmic model was run using the real dataset. Similar to the KNN model, the score was quite high, as most of the negative cases (0, no fraud)
+                      were correct. This model had an improved rate of catching fraud cases over the KNN model, correctly identifying 88% of cases. However this was not without tradeoff,
+                      as more than 2000 cases of non-fraud were identified as fraud. This is approximately 3% of all negative cases.
+
+                      While this log model miss-identified many more cases than the KNN model it may be preferable as it correctly identified more fraud cases.
+                    </p><br>
+                    <br>
+                    <h2>Sythetic Data</h2><br>
+                    <img src="assets/images/confusion_matrix_log_GOOD_synthetic.png" alt="Sythetic LOG Confusion Matrix" class="img-responsive"/>
+                    <h3>Log Confusion Matrix for Synthetic Data</h3><br>
+                    <h3><strong>Model Score</strong> = 0.9122</h3>
+                    <h3><strong>AUC Score</strong> = 0.5239</h3>
+                    <p>For the sythetic data only a log model was run. This model had a much lower dimensionality than the real data but performed just as well. Because of the size of the dataset
+                      it is better to measure the model by percentages rather than numbers. This model found most cases as negative (0, no fraud) as expected. This model correctly identified over 
+                      90% of all fraud cases, better than the real data results. This came with a tradeoff however, as 10% of non-fraud cases were miss-classified as fraud. 
+                      
+                    </p>
                     <br>
                     </article>
                 </div>
