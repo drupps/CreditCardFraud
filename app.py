@@ -21,19 +21,14 @@ def data():
     return render_template("data.html")
 
 
-@app.route("/discovery")
-def discovery():
-    return render_template("discovery.html")
+@app.route("/project")
+def project():
+    return render_template("project.html")
 
 
 @app.route("/graphs")
 def graphs():
     return render_template("graphs.html")
-
-
-@app.route("/code")
-def code():
-    return render_template("code.html")
 
 
 if __name__ == "__main__":
