@@ -2,29 +2,60 @@
 <html>
 
   <head>
-    <title>data</title>
+    <title>Data</title>
 
-    <!-- Bootstrap CSS and JS-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
-      integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
-      crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
-      integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
-      crossorigin="anonymous"></script>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Exploring Credit Card Fraud">
+  <meta name="author" content="Han Zhao, Zach Adams, David Ruppel, and Morgan Tighe">
+  <link rel="stylesheet" href="./assets/css/styles.css" media="screen">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" media="screen">
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/product/">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+  integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+  integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+  crossorigin="anonymous"></script>
 
-    <!-- D3 JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+<!-- D3 JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
 
-    <!-- Plotly JS -->
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<!-- Plotly JS -->
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-  </head>
+<!-- Boostrap Stylesheet -->
+<link rel="stylesheet" href="assets/css/bootstrap.min.css" media="screen">
 
-  <body>
+<!-- Our own CSS stylesheet -->
+<link rel="stylesheet" href="assets/css/styles.css" media="screen">
+
+</head>
+
+<body>
+<!-- Start of navbar -->
+<ul>
+  <li><a class="active" href="/">Home</a></li>
+  <li><a href="/team">Meet the Team</a></li>
+  <li><a href="/discovery.html">Discovery</a></li>
+  <li><a href="/data.html">Data</a></li>
+  <li><a href="/project.html">Project</a></li>
+</ul>
+<div class="container">
+  <section class="row">
+    <div class="col-md-8">
+      <table style="width:100%">
+      <article class="description-content">
+          <h1 class="description-header">Meet the Team</h1>
+          <hr class="description-hr"/>
+          <img src="assets/images/DataSources.jpg" alt="Introducing Team" class="img-responsive"/>
+
     <h1>Real Data</h1>
     <h2><a href="https://www.kaggle.com/mlg-ulb/creditcardfraud">Click Here to View Data</a></h2>
       <p>It is important that credit card companies are able to recognize fraudulent credit card transactions so that customers are not charged for items that they did not purchase. The datasets contains transactions made by credit cards in September 2013 by european cardholders. This dataset presents transactions that occurred in two days, where we have 492 frauds out of 284,807 transactions. The dataset is highly unbalanced, the positive class (frauds) account for 0.172% of all transactions. It contains only numerical input variables which are the result of a PCA transformation. Unfortunately, due to confidentiality issues, we cannot provide the original features and more background information about the data. Features V1, V2, … V28 are the principal components obtained with PCA, the only features which have not been transformed with PCA are 'Time' and 'Amount'. Feature 'Time' contains the seconds elapsed between each transaction and the first transaction in the dataset. The feature 'Amount' is the transaction Amount, this feature can be used for example-dependant cost-senstive learning. Feature 'Class' is the response variable and it takes value 1 in case of fraud and 0 otherwise.</p>
@@ -71,6 +102,28 @@
       
       <p>This work is part of the research project ”Scalable resource-efficient systems for big data analytics” funded by the Knowledge Foundation (grant: 20140032) in Sweden.</p>      
       <p>PaySim first paper of the simulator: E. A. Lopez-Rojas , A. Elmir, and S. Axelsson. "PaySim: A financial mobile money simulator for fraud detection". In: The 28th European Modeling and Simulation Symposium-EMSS, Larnaca, Cyprus. 2016</p>
-  </body>
+    </article>
+  </div>
+  </section>
+  </div>
+
+  <!-- Start of footer -->
+<footer class="footer navbar-fixed-bottom">
+  <div class="two-toned-footer-color">
+  <p class="text-muted text-muted-footer text-center"><b>Zach Adams | David Ruppel | Han Zhao | Morgan Tighe</b></p>
+  </div>
+</footer>
+<!-- End of footer -->
+
+<!-- jQuery CDN -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap CDN -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    </body>
+  
+  </html>
+
+   </body>
 
 </html>

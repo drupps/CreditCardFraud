@@ -10,7 +10,7 @@
   <meta name="description" content="Exploring Credit Card Fraud">
   <meta name="author" content="Han Zhao, Zach Adams, David Ruppel, and Morgan Tighe">
   <title>Detecting Credit Card Fraud</title>
-  <link rel="stylesheet" href="assets/css/styles.css" media="screen">
+  <link rel="stylesheet" href="./assets/css/styles.css" media="screen">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css" media="screen">
   <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/product/">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -40,43 +40,14 @@
 
 <body>
 <!-- Start of navbar -->
-<nav class="navbar navbar-default">
-  <div class="container-fluid navbar-custom">
-
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="row">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle Navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <div class="col-xs-9 phone-nav">
-          <a class="navbar-brand" href="#" id="logo">Credit Card Fraud</a>
-        </div>
-      </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right navbar-right-custom">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="visualizations/temp.html">Max Temperature</a></li>
-              <li><a href="visualizations/humidity.html">Humidity</a></li>
-              <li><a href="visualizations/cloudiness.html">Cloudiness</a></li>
-              <li><a href="visualizations/wind.html">Wind Speed</a></li>
-            </ul>
-          </li>
-          <li><a href="discovery.html">Discovery</a></li>
-          <li><a href="data.html">Meet the Team</a></li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div>
-  </div><!-- /.container-fluid -->
-</nav>
-<!-- End of navbar -->
+<ul>
+  <li><a class="active" href="/">Home</a></li>
+  <li><a href="/team">Meet the Team</a></li>
+  <li><a href="/discovery.html">Discovery</a></li>
+  <li><a href="/data.html">Data</a></li>
+  <li><a href="/project.html">Project</a></li>
+  <li><a href="/graphs.html">Graphs</a></li>
+</ul>
 
 <!-- Start of container -->
 <div class="container">
@@ -90,34 +61,32 @@
         <p>After assembling the dataset, we used AWS to store the data, SQL to pull in the data, and python to code for machine learning. We also created the webpage and deployed it on Heroku.</p>
       </article>
     </div>
+    </section>
+    
     <div class="col-md-4">
-
       <!-- Start of Visualizations imageNav Area -->
       <section id="imageNav-area">
         <div class="imageNav-content">
           <h2 class="imageNav-header">Visualizations</h2>
           <hr />
           <div id="images">
-            <a href="visualizations/temp.html"><img src="assets/images/shutterstock_374227129.jpg" alt="Latitude vs. Max Temperature" class="imageNav-photo"></a>
-            <a href="visualizations/humidity.html"><img src="assets/images/shutterstock_374227129.jpg" alt="Latitude vs. Humidity" class="imageNav-photo"></a>
-            <a href="visualizations/cloudiness.html"><img src="assets/images/shutterstock_374227129.jpg" alt="Latitude vs. Cloudiness" class="imageNav-photo"></a>
-            <a href="visualizations/wind.html"><img src="assets/images/shutterstock_374227129.jpg" alt="Latitude vs. Wind Speed" class="imageNav-photo"></a>
+            <a href="/graphs.html"><img src="assets/images/confusion_matrix_knn_GOOD_real.PNG" alt="KNN Confusion Matrix - Real Data" class="imageNav-photo"></a>
+            <a href="/graphs.html"><img src="assets/images/confusion_matrix_log_GOOD_real.PNG" alt="Log Confusion Matrix - Real Data" class="imageNav-photo"></a>
+            <a href="/graphs.html"><img src="assets/images/confusion_matrix_log_GOOD_synthetic.PNG" alt="Log Confusion Matrix - Synthetic Data" class="imageNav-photo"></a>
           </div>
         </div>
       </section>
       <!-- End of the Visualizations imageNav Area -->
-
-    </div>
-  </section>
-</div>
+      </div>
+      </div>
+       </div>
 <!-- End of container -->
 
 <!-- Start of footer -->
 <footer class="footer navbar-fixed-bottom">
-  <div class="two-toned-footer-color"></div>
-  <p class="text-muted text-muted-footer text-center">
-    &copy; Copyright Coding Bootcamp 2017
-  </p>
+  <div class="two-toned-footer-color">
+  <p class="text-muted text-muted-footer text-center"><b>Zach Adams | David Ruppel | Han Zhao | Morgan Tighe</b></p>
+  </div>
 </footer>
 <!-- End of footer -->
 
