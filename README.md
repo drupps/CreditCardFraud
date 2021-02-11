@@ -21,7 +21,7 @@ We used two datasets because real credit card fraud is extremely rare. According
 >
 >We present a synthetic dataset generated using the simulator called PaySim as an approach to such a problem. PaySim uses aggregated data from the private dataset to generate a >synthetic dataset that resembles the normal operation of transactions and injects malicious behaviour to later evaluate the performance of fraud detection methods.
 
-# PaySim
+## PaySim
 
 >PaySim simulates mobile money transactions based on a sample of real transactions extracted from one month of financial logs from a mobile money service implemented in an >African country. The original logs were provided by a multinational company, who is the provider of the mobile financial service which is currently running in more than 14 >countries all around the world.
 >
